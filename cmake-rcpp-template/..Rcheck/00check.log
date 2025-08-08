@@ -1,0 +1,487 @@
+* using log directory 'C:/Data Science/Privat/cmake-rcpp-template/..Rcheck'
+* using R version 4.5.0 (2025-04-11 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 14.2.0
+    GNU Fortran (GCC) 14.2.0
+* running under: Windows 11 x64 (build 26100)
+* using session charset: UTF-8
+* using option '--as-cran'
+* checking for file './DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'CMakeRcppTemplate' version '0.1.0'
+* package encoding: UTF-8
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Julian Märte <mail@maertej.com>'
+
+New submission
+
+License components with restrictions and base license permitting such:
+  MIT + file LICENSE
+File 'LICENSE':
+  MIT License
+  
+  Copyright (c) 2025 Julian Märte
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+The build time stamp is missing.
+
+Found the following \keyword or \concept entries
+which likely give several index terms:
+  File 'CLDistanceMatrix.Rd':
+    \keyword{ distance, opencl }
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .gitmodules
+  inst/.gitkeep
+  ..Rcheck
+These were most likely included in error. See section 'Package
+structure' in the 'Writing R Extensions' manual.
+
+CRAN-pack does not know about
+  inst/.gitkeep
+  ..Rcheck
+* checking for portable file names ... OK
+* checking serialization versions ... OK
+* checking whether package 'CMakeRcppTemplate' can be installed ... [28s] OK
+* used C++ compiler: 'G__~1.EXE (GCC) 14.2.0'
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... NOTE
+unable to verify current time
+* checking DESCRIPTION meta-information ... NOTE
+License stub is invalid DCF.
+Author field differs from that derived from Authors@R
+  Author:    'Julian Märte'
+  Authors@R: 'Julian Märte [aut, cre]'
+
+Checking should be performed on sources prepared by 'R CMD build'.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Found the following directory with the name of a check directory:
+  ./..Rcheck
+Most likely, these were included erroneously.
+Found the following directories with names of version control directories:
+  ./src/backend/lib/OpenCL-CLHPP/.git
+  ./src/backend/lib/OpenCL-Headers/.git
+These should not be in a package tarball.
+* checking code files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking whether startup messages can be suppressed ... NOTE
+[1] "C:/Data Science/Privat/cmake-rcpp-template/..Rcheck/CMakeRcppTemplate/kernels"
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+
+It looks like this package (or a package it requires) has a startup
+message which cannot be suppressed: see ?packageStartupMessage.
+* checking use of S3 registration ... OK
+* checking dependencies in R code ... NOTE
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+* checking S3 generic/method consistency ... WARNING
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+See section 'Generic functions and methods' in the 'Writing R
+Extensions' manual.
+* checking replacement functions ... WARNING
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+The argument of a replacement function which corresponds to the right
+hand side must be named 'value'.
+* checking foreign function calls ... NOTE
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+See chapter 'System and foreign language interfaces' in the 'Writing R
+Extensions' manual.
+* checking R code for possible problems ... NOTE
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+Datei 'cmake-rcpp-template/R/OpenCLTemplateForR.R':
+  .onLoad ruft auf:
+    print(kernelsPath)
+
+Startfunktionen des Pakets sollten 'packageStartupMessage' nutzen, um
+  Nachrichten zu generieren.
+Siehe Abschnitt 'Good practice' in '?.onAttach'.
+
+[1] "C:/Data Science/Privat/cmake-rcpp-template/..Rcheck/CMakeRcppTemplate/kernels"
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+All user-level objects in a package should have documentation entries.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking for code/documentation mismatches ... WARNING
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+* checking Rd \usage sections ... NOTE
+Found device: NVIDIA GeForce RTX 4070 Laptop GPU (NVIDIA Corporation) | Type: GPU | Compute Units: 36
+Found device: Intel(R) RaptorLake-S Mobile Graphics Controller (Intel(R) Corporation) | Type: GPU | Compute Units: 32
+Selected device: NVIDIA GeForce RTX 4070 Laptop GPU on platform: NVIDIA CUDA
+The \usage entries for S3 methods should use the \method markup and not
+their full name.
+See chapter 'Writing R documentation files' in the 'Writing R
+Extensions' manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking line endings in shell scripts ... OK
+* checking line endings in C/C++/Fortran sources/headers ... NOTE
+Found the following sources/headers with CR or CRLF line endings:
+  src/RcppInterface.cpp
+  src/backend/build/CMakeFiles/3.30.4/CompilerIdCXX/CMakeCXXCompilerId.cpp
+  src/backend/include/backend/distance_matrix.hpp
+  src/backend/include/backend/export.hpp
+  src/backend/include/backend/init.hpp
+  src/backend/lib/OpenCL-CLHPP/examples/src/headerexample.cpp
+  src/backend/lib/OpenCL-CLHPP/examples/src/trivial.cpp
+  src/backend/lib/OpenCL-CLHPP/examples/src/trivialSizeTCompat.cpp
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/src/foo.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/src/foo.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/src/main.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/test/test_foo.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/test/test_main.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AT91SAM7X256.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcConductor.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcHardware.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcHardwareConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcHardwareConfigurator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcModel.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcTemperatureSensor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/AdcTemperatureSensor.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Executor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Executor.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/IntrinsicsWrapper.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/IntrinsicsWrapper.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Main.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Main.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Model.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Model.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/ModelConfig.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TaskScheduler.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TaskScheduler.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TemperatureCalculator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TemperatureCalculator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TemperatureFilter.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TemperatureFilter.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerConductor.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerConfigurator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerHardware.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerInterruptConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerInterruptConfigurator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerInterruptHandler.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerInterruptHandler.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/TimerModel.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/Types.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartBaudRateRegisterCalculator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartBaudRateRegisterCalculator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartConductor.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartConfigurator.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartHardware.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartModel.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartPutChar.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartPutChar.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartTransmitBufferStatus.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/src/UsartTransmitBufferStatus.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestAdcConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestAdcHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestAdcHardwareConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestAdcModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestAdcTemperatureSensor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestExecutor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestMain.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTaskScheduler.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTemperatureCalculator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTemperatureFilter.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerInterruptConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerInterruptHandler.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestTimerModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartBaudRateRegisterCalculator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartConductor.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartConfigurator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartHardware.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartModel.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartPutChar.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/temp_sensor/test/TestUsartTransmitBufferStatus.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/src/cmock.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/src/cmock.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/src/cmock_internals.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/c/TestCMockC.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/c/TestCMockCDynamic.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/c/TestCMockCDynamic_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/c/TestCMockC_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v4/incIAR/AT91SAM7X-EK.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v4/incIAR/AT91SAM7X256_inc.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v4/incIAR/ioat91sam7x256.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v4/incIAR/lib_AT91SAM7X256.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v4/srcIAR/Cstartup_SAM7.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v5/incIAR/AT91SAM7X-EK.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v5/incIAR/AT91SAM7X256_inc.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v5/incIAR/lib_AT91SAM7X256.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v5/incIAR/project.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/iar/iar_v5/srcIAR/Cstartup_SAM7.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/callingconv.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/const.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/inline.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/osek.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/parsing.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/c_exception/lib/CException.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/c_exception/lib/CException.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/c_exception/test/TestException.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/c_exception/test/support/CExceptionConfig.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/src/ProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/src/ProductionCode.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/src/ProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/src/ProductionCode2.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/test/TestProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/test/TestProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/test/test_runners/TestProductionCode2_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_1/test/test_runners/TestProductionCode_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/src/ProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/src/ProductionCode.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/src/ProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/src/ProductionCode2.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/test/TestProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/test/TestProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/test/test_runners/TestProductionCode2_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/test/test_runners/TestProductionCode_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_2/test/test_runners/all_tests.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/helper/UnityHelper.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/helper/UnityHelper.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/src/ProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/src/ProductionCode.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/src/ProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/src/ProductionCode2.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/test/TestProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_3/test/TestProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/src/ProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/src/ProductionCode.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/src/ProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/src/ProductionCode2.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/test/TestProductionCode.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/test/TestProductionCode2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/test/test_runners/TestProductionCode2_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/example_4/test/test_runners/TestProductionCode_Runner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/examples/unity_config.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/src/unity_fixture.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/src/unity_fixture.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/src/unity_fixture_internals.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/main/AllTests.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/template_fixture_tests.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/unity_fixture_Test.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/unity_fixture_TestRunner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/src/unity_memory.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/src/unity_memory.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/unity_memory_Test.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/unity_memory_TestRunner.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/unity_output_Spy.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/unity_output_Spy.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/src/unity.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/src/unity.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/src/unity_internals.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_cmd.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_def.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_head1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_head1.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_cmd.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_def.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_head1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_head1.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_new1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_new2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_param.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_run1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_run2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_mock_yaml.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_new1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_new2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_param.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_run1.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_run2.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/expectdata/testsample_yaml.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/CException.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/Defs.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/cmock.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/mockMock.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/testRunnerGenerator.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/testRunnerGeneratorSmall.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/testdata/testRunnerGeneratorWithMocks.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/self_assessment_utils.h
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_arrays.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_core.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_doubles.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_floats.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_integers.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_integers_64.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_memory.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_parameterized.c
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/tests/test_unity_strings.c
+  src/backend/lib/OpenCL-CLHPP/include/CL/cl2.hpp
+  src/backend/lib/OpenCL-CLHPP/include/CL/opencl.hpp
+  src/backend/lib/OpenCL-CLHPP/tests/pkgconfig/pkgconfig.cpp
+  src/backend/lib/OpenCL-CLHPP/tests/test_openclhpp.cpp
+  src/backend/lib/OpenCL-CLHPP/tests/test_versions.cpp
+  src/backend/lib/OpenCL-Headers/CL/cl.h
+  src/backend/lib/OpenCL-Headers/CL/cl_d3d10.h
+  src/backend/lib/OpenCL-Headers/CL/cl_d3d11.h
+  src/backend/lib/OpenCL-Headers/CL/cl_dx9_media_sharing.h
+  src/backend/lib/OpenCL-Headers/CL/cl_dx9_media_sharing_intel.h
+  src/backend/lib/OpenCL-Headers/CL/cl_egl.h
+  src/backend/lib/OpenCL-Headers/CL/cl_ext.h
+  src/backend/lib/OpenCL-Headers/CL/cl_ext_intel.h
+  src/backend/lib/OpenCL-Headers/CL/cl_function_types.h
+  src/backend/lib/OpenCL-Headers/CL/cl_gl.h
+  src/backend/lib/OpenCL-Headers/CL/cl_gl_ext.h
+  src/backend/lib/OpenCL-Headers/CL/cl_half.h
+  src/backend/lib/OpenCL-Headers/CL/cl_icd.h
+  src/backend/lib/OpenCL-Headers/CL/cl_layer.h
+  src/backend/lib/OpenCL-Headers/CL/cl_platform.h
+  src/backend/lib/OpenCL-Headers/CL/cl_va_api_media_sharing_intel.h
+  src/backend/lib/OpenCL-Headers/CL/cl_version.h
+  src/backend/lib/OpenCL-Headers/CL/opencl.h
+  src/backend/lib/OpenCL-Headers/tests/conan/example.c
+  src/backend/lib/OpenCL-Headers/tests/pkgconfig/pkgconfig.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_d3d10.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_d3d11.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_dx9_media_sharing.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_dx9_media_sharing_intel.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_egl.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_ext.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_ext_intel.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_gl.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_gl_ext.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_half.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_icd.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_layer.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_platform.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_cl_version.h.c
+  src/backend/lib/OpenCL-Headers/tests/test_ext_headers.c
+  src/backend/lib/OpenCL-Headers/tests/test_headers.c
+  src/backend/lib/OpenCL-Headers/tests/test_opencl.h.c
+  src/backend/src/CL_context.cpp
+  src/backend/src/distance_matrix.cpp
+  src/backend/src/init.cpp
+  src/backend/src/internal/CL_context.hpp
+Some Unix compilers require LF line endings.
+* checking line endings in Makefiles ... WARNING
+Found the following Makefile(s) with CR or CRLF line endings:
+  src/Makevars
+  src/backend/build/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/examples/make_example/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/Makefile
+Some Unix 'make' programs require LF line endings.
+* checking compilation flags in Makevars ... OK
+* checking for GNU extensions in Makefiles ... WARNING
+Found the following file(s) containing GNU extensions:
+  src/Makevars
+  src/backend/build/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/fixture/test/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/extras/memory/test/Makefile
+  src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/unity/test/Makefile
+Portable Makefiles do not use GNU extensions such as +=, :=, $(shell),
+$(wildcard), ifeq ... endif, .NOTPARALLEL See section 'Writing portable
+packages' in the 'Writing R Extensions' manual.
+* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking use of PKG_*FLAGS in Makefiles ... OK
+* checking use of SHLIB_OPENMP_*FLAGS in Makefiles ... OK
+* checking include directives in Makefiles ... OK
+* checking pragmas in C/C++ headers and code ... NOTE
+Files which contain pragma(s) suppressing diagnostics:
+  'src/backend/lib/OpenCL-CLHPP/external/CMock/test/system/test_compilation/const.h'
+  'src/backend/lib/OpenCL-CLHPP/external/CMock/vendor/c_exception/lib/CException.c'
+  'src/backend/lib/OpenCL-Headers/CL/cl_platform.h'
+* checking compilation flags used ... OK
+* checking compiled code ... NOTE
+Datei 'CMakeRcppTemplate/libs/x64/BACKEND.dll':
+  Found no calls to: 'R_registerRoutines', 'R_useDynamicSymbols'
+
+It is good practice to register native routines and to disable symbol
+search.
+
+See 'Writing portable packages' in the 'Writing R Extensions' manual.
+* checking examples ... NONE
+* checking PDF version of manual ... WARNING
+LaTeX errors when creating PDF version.
+This typically indicates Rd problems.
+* checking PDF version of manual without index ... ERROR
+Re-running with no redirection of stdout/stderr.
+* checking HTML version of manual ... OK
+* checking for code which exercises the package ... WARNING
+No examples, no tests, no vignettes
+* checking for non-standard things in the check directory ... NOTE
+Found the following files/directories:
+  'CMakeRcppTemplate-manual.tex'
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 1 ERROR, 9 WARNINGs, 13 NOTEs
