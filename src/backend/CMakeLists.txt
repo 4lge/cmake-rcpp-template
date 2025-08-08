@@ -4,6 +4,31 @@ PROJECT(BACKEND CXX)
 # Get the Rcpp minGW/gcc compilers in order to achieve highest degree of uniformity while users only have to install Rtools.
 include(cmake/find_toolchain.cmake)
 
+# Pull the dependencies from Github
+include(ExternalProject)
+set(EXTERNAL_LIB_LOCATION ${CMAKE_SOURCE_DIR}/lib)
+ExternalProject_Add(OpenCL_Headers
+    GIT_REPOSITORY https://github.com/KhronosGroup/OpenCL-Headers.git
+    GIT_TAG b79b358ff6b9998d3fc65a5f55083db3d651d55d
+    SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/OpenCL-Headers
+
+    CONFIGURE_COMMAND ""  # Don't run cmake
+    BUILD_COMMAND ""      # Don't build
+    INSTALL_COMMAND ""    # Don't install
+)
+ExternalProject_Add(OpenCL_CLHPP
+    GIT_REPOSITORY https://github.com/KhronosGroup/OpenCL-CLHPP.git
+    GIT_TAG 2a608428f725cad7903ef55e1ce5b995895838f5
+    SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/OpenCL-CLHPP
+
+    CONFIGURE_COMMAND ""  # Don't run cmake
+    BUILD_COMMAND ""      # Don't build
+    INSTALL_COMMAND ""    # Don't install
+)
+
+
+
+
 # Include the external library headers in the lib folder
 include_directories(
   ${CMAKE_SOURCE_DIR}/lib/OpenCL-Headers
