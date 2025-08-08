@@ -1,4 +1,0 @@
-import(Rcpp)
-
-useDynLib(CMakeRcppTemplate, .registration = TRUE)
-export(CLDistanceMatrix)
