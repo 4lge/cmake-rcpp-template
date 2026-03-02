@@ -1,4 +1,4 @@
 import(Rcpp)
 
-useDynLib(OpenCLBayes, .registration = TRUE)
-export(runifCL)
+useDynLib(CMakeRcppTemplate, .registration = TRUE)
+export(CLDistanceMatrix)

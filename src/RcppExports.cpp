@@ -10,16 +10,14 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// runifCL
-NumericVector runifCL(const int n, const double lower, const double upper);
-RcppExport SEXP _OpenCLBayes_runifCL(SEXP nSEXP, SEXP lowerSEXP, SEXP upperSEXP) {
+// CLDistanceMatrix
+NumericMatrix CLDistanceMatrix(const NumericMatrix& mat);
+RcppExport SEXP _CMakeRcppTemplate_CLDistanceMatrix(SEXP matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const int >::type n(nSEXP);
-    Rcpp::traits::input_parameter< const double >::type lower(lowerSEXP);
-    Rcpp::traits::input_parameter< const double >::type upper(upperSEXP);
-    rcpp_result_gen = Rcpp::wrap(runifCL(n, lower, upper));
+    Rcpp::traits::input_parameter< const NumericMatrix& >::type mat(matSEXP);
+    rcpp_result_gen = Rcpp::wrap(CLDistanceMatrix(mat));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -27,12 +25,12 @@ END_RCPP
 RcppExport SEXP InitCL(void);
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_OpenCLBayes_runifCL", (DL_FUNC) &_OpenCLBayes_runifCL, 3},
+    {"_CMakeRcppTemplate_CLDistanceMatrix", (DL_FUNC) &_CMakeRcppTemplate_CLDistanceMatrix, 1},
     {"InitCL", (DL_FUNC) &InitCL, 0},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_OpenCLBayes(DllInfo *dll) {
+RcppExport void R_init_CMakeRcppTemplate(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
