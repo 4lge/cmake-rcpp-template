@@ -1,5 +1,6 @@
 .onLoad <- function(libname, pkgname) {
   kernelsPath <- system.file("kernels", package = pkgname)
   print(kernelsPath)
-  .Call("SetKernelsPath", kernelsPath, PACKAGE = pkgname)
+  #.Call("SetKernelsPath", kernelsPath, PACKAGE = pkgname)
+  .Call("InitCL", PACKAGE = pkgname)
 }

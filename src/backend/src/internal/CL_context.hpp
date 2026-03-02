@@ -40,6 +40,8 @@ namespace backend {
 		// get the used device
 	    const cl::Device& get_device() const;
 
+    void activate(int platform_id, int device_id);
+    
 		// Build a program from a kernel file
 	    cl::Program get_program(const std::string& filepath) const;
 
@@ -55,8 +57,12 @@ namespace backend {
 
 
 	    // CL constants:
+    std::vector<cl::Platform> platforms;
+    std::vector<cl::Device> devices;    
         cl::Device best_device;
 		cl::Platform best_platform;
+    cl::Device active_device;
+    cl::Platform active_platform;
 	    cl::Context context;
 	    cl::CommandQueue queue;
 

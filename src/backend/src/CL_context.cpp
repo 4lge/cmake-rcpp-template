@@ -10,7 +10,6 @@
 namespace backend {
 
 	CL_context::CL_context() {
-		std::vector<cl::Platform> platforms;
         	try {
 		    cl::Platform::get(&platforms);
 		    if (platforms.empty()) {
@@ -23,22 +22,39 @@ namespace backend {
 		}
 
 		bool found = false;
-
+    int platform_cnt = 0;
 		for (const auto& platform : platforms) {
-		    std::vector<cl::Device> devices;
+      std::cout << "\tPlatform no: " << platform_cnt << std::endl;
+      std::cout << "\tPlatform name: " << platform.getInfo<CL_PLATFORM_NAME>() << std::endl;
+      std::cout << "\tPlatform vendor: " << platform.getInfo<CL_PLATFORM_VENDOR>() << std::endl;
+      std::cout << "\tPlatform version: " << platform.getInfo<CL_PLATFORM_VERSION>() << std::endl;
+      std::cout << "\tPlatform profile: " << platform.getInfo<CL_PLATFORM_PROFILE>() << std::endl;
+      std::cout << "\tPlatform extensions: " << platform.getInfo<CL_PLATFORM_EXTENSIONS>() << std::endl;
+      
+ 
 		    platform.getDevices(CL_DEVICE_TYPE_ALL, &devices);
 
+      int device_cnt = 0;
 		    for (const auto& dev : devices) {
 		        cl_device_type type = dev.getInfo<CL_DEVICE_TYPE>();
 		        cl_uint compute_units = dev.getInfo<CL_DEVICE_MAX_COMPUTE_UNITS>();
 		        std::string name = dev.getInfo<CL_DEVICE_NAME>();
 		        std::string vendor = dev.getInfo<CL_DEVICE_VENDOR>();
+	std::cout << "\tDevice no: " << device_cnt << std::endl;
+	// 
+	// 
+	cl_device_fp_config fp_config = dev.getInfo<CL_DEVICE_DOUBLE_FP_CONFIG>();
+	if(fp_config & (CL_FP_FMA | CL_FP_ROUND_TO_NEAREST | CL_FP_ROUND_TO_ZERO | CL_FP_ROUND_TO_INF | CL_FP_INF_NAN | CL_FP_DENORM)){
+	  std::cout << "Device is double capable" << "\n";
+	} else {
+	  std::cout << "Device is float only" << "\n";
+	}
 
-		        std::cout << "Found device: " << name << " (" << vendor << ")"
-		                  << " | Type: " << (type == CL_DEVICE_TYPE_GPU ? "GPU" :
+	std::cout << "Found device: " << name << " (" << vendor << ") at plat.dev:" << platform_cnt << "." << device_cnt 
+		  << "\n | Type: " << (type == CL_DEVICE_TYPE_GPU ? "GPU" :
 		                                     type == CL_DEVICE_TYPE_CPU ? "CPU" :
 		                                     type == CL_DEVICE_TYPE_ACCELERATOR ? "Accelerator" : "Other")
-		                  << " | Compute Units: " << compute_units << "\n";
+		  << "\n | Compute Units: " << compute_units << "\n";
 
 		        // Prioritize GPU over others
 		        if (!found || (type == CL_DEVICE_TYPE_GPU && best_device.getInfo<CL_DEVICE_TYPE>() != CL_DEVICE_TYPE_GPU) ||
@@ -47,7 +63,9 @@ namespace backend {
 		            best_platform = platform;
 		            found = true;
 		        }
+	device_cnt++;
 		    }
+      platform_cnt++;
 		}
 
 		if (!found) {
@@ -58,10 +76,22 @@ namespace backend {
 		          << " on platform: " << best_platform.getInfo<CL_PLATFORM_NAME>() << "\n";
 
 		// Use best_device and best_platform to create context and queue:
+    active_device = best_device;
+    active_platform = best_platform;
 		context = cl::Context(best_device);
 		queue = cl::CommandQueue(context, best_device);
 	}
 
+  void CL_context::activate(int platform_id, int device_id){
+    this->active_platform = this->platforms[platform_id];
+    this->active_platform.getDevices(CL_DEVICE_TYPE_ALL, &devices);
+    this->active_device = this->devices[device_id];
+    this->context = cl::Context(this->active_device);
+    this->queue = cl::CommandQueue(this->context, this->active_device);
+    std::cout << "Switched device: " << this->active_device.getInfo<CL_DEVICE_NAME>()
+	      << " on platform: " << this->active_platform.getInfo<CL_PLATFORM_NAME>() << "\n";    
+  }
+  
 	CL_context::~CL_context() {}
 
 	CL_context& CL_context::instance() {
@@ -107,7 +137,8 @@ namespace backend {
 		sources.push_back({kernel_str.c_str(), kernel_str.length()});
         cl::Program program(context, sources);
 
-        cl_int err = program.build("-cl-fast-relaxed-math");
+    //    cl_int err = program.build("-cl-fast-relaxed-math");
+    cl_int err = program.build("");
         if (err != CL_SUCCESS) {
             std::string buildlog = program.getBuildInfo<CL_PROGRAM_BUILD_LOG>(best_device);
             throw std::runtime_error("Error building: " + buildlog + "\n");

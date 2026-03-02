@@ -25,7 +25,25 @@ ExternalProject_Add(OpenCL_CLHPP
     BUILD_COMMAND ""      # Don't build
     INSTALL_COMMAND ""    # Don't install
 )
+ExternalProject_Add(OpenCL_Wrapper
+    GIT_REPOSITORY https://github.com/ProjectPhysX/OpenCL-Wrapper.git
+    GIT_TAG ff34d194c0c82b71b458d77c7c339fa5958af038
+    SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/OpenCL-Wrapper
 
+    CONFIGURE_COMMAND ""  # Don't run cmake
+    BUILD_COMMAND ""      # Don't build
+    INSTALL_COMMAND ""    # Don't install
+)
+
+ExternalProject_Add(CLErrorLookup
+    GIT_REPOSITORY https://github.com/otto-link/CLErrorLookup/
+    GIT_TAG 27adbb9217e2a9e31b08fe32acc21df9d2b53e84
+    SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/CLErrorLookup
+
+    CONFIGURE_COMMAND ""  # Don't run cmake
+    BUILD_COMMAND ""      # Don't build
+    INSTALL_COMMAND ""    # Don't install
+)
 
 
 
@@ -33,6 +51,8 @@ ExternalProject_Add(OpenCL_CLHPP
 include_directories(
   ${CMAKE_SOURCE_DIR}/lib/OpenCL-Headers
   ${CMAKE_SOURCE_DIR}/lib/OpenCL-CLHPP/include
+  ${CMAKE_SOURCE_DIR}/lib/OpenCL-Wrapper/src
+  ${CMAKE_SOURCE_DIR}/lib/CLErrorLookup
   ${OpenCL_INCLUDE_DIRS}
 )
 # find your binaries here
@@ -41,7 +61,8 @@ FIND_PACKAGE(OpenCL REQUIRED)
 
 # Make a shared library
 file(GLOB_RECURSE SOURCES "src/*.cpp")
-ADD_LIBRARY(BACKEND SHARED ${SOURCES})
+file(GLOB_RECURSE KERNELS "kernels/*.cpp")
+ADD_LIBRARY(BACKEND SHARED ${SOURCES} ${KERNELS})
 
 # The header includes go here
 # Leave the two /include and /src/internal ones in here; the rest can be altered.
@@ -53,6 +74,7 @@ target_include_directories(BACKEND
 		${OpenCL_INCLUDE_DIRS}
     ${CMAKE_SOURCE_DIR}/lib/OpenCL-Headers
     ${CMAKE_SOURCE_DIR}/lib/OpenCL-CLHPP/include
+    ${CMAKE_SOURCE_DIR}/lib/CLErrorLookup/CLErrorLookup/include
 )
 
 # Linkage against your binaries
