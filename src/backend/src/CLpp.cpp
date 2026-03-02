@@ -11,9 +11,9 @@
 namespace backend {
 
   CLpp::CLpp() {
-    // this->activeDevice = Device(select_device_with_most_flops()); // compile OpenCL C code for the fastest available device
-    this->activeDevice = Device(select_device_with_most_memory()); // compile OpenCL C code for the device with most RAM
-    //    this->activeDevice = Device(select_device_with_id(1)); // compile OpenCL C code for the fastest available device
+    this->activeDevice = Device(select_device_with_most_flops()); // compile OpenCL C code for the fastest available device
+    //this->activeDevice = Device(select_device_with_most_memory()); // compile OpenCL C code for the device with most RAM
+    //this->activeDevice = Device(select_device_with_id(1)); // compile OpenCL C code for the fastest available device
 
     /*
 	cl_device_fp_config fp_config = device.getInfo<CL_DEVICE_DOUBLE_FP_CONFIG>();
