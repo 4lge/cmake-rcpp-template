@@ -16,9 +16,11 @@ NumericMatrix CLDistanceMatrix(const NumericMatrix& mat) {
 
     backend::distance_matrix(input, output);
 
+    std::cout << "output[0]=" << output[0] << std::endl;
     NumericMatrix outmat(rows, rows);
     std::copy(output.begin(), output.end(), outmat.begin());
 
+    std::cout << "outmat[0,0]=" << outmat[0,0] << std::endl;
     return outmat;
 }
 

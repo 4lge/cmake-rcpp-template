@@ -12,7 +12,7 @@ namespace backend {
     // try {
 
 	  Device device = CLpp::instance().getActiveDevice();
-	  const uint N = data.size();// 256u; // size of vectors
+	  const uint N = 256u; //data.size();// 256u; // size of vectors
 	  const uint M = res.size();// 256u; // size of vectors
 	  Memory<float> Input(device, N); // allocate memory on both host and device
 	  Memory<int> NN(device, 1); // allocate memory on both host and device
@@ -25,16 +25,22 @@ namespace backend {
 	  for(auto i=0; i<N; i++)
 	    Input[i] = data[i];
 	  NN[0]=N; MM[0]=M;
-    
+
+	  Output[0]=42.4;
+	  
 	  Input.write_to_device(); // copy data from host memory to device memory
 	  NN.write_to_device(); // copy data from host memory to device memory
 	  MM.write_to_device(); // copy data from host memory to device memory
+	  
 	  distance_matrix_kernel.run(); // run add_kernel on the device
+
 	  Output.read_from_device(); // copy data from device memory to host memory
 
+	  std::cout << "Output[1]=" << Output[1] << std::endl;
+	  
 	  for(auto i=0; i<M; i++)
-	    res[i] = Output[i];
-    
+	    res[i] = 42.0; //Output[i];
+	  std::cout << "res[0]=" << res[0] << std::endl;
 	  /*        }
         catch (cl::Error &err) {
 	  throw std::runtime_error(std::string("OpenCL Error: ") + err.what() + " (" + std::to_string(err.err()) + ")\n");

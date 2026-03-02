@@ -54,8 +54,8 @@ typedef float16 real16_t;
 	     tmpRes += diff * diff;
 	   }
 	   tmpRes = sqrt(tmpRes);
-	   output[j * N + i] = tmpRes;
-	   output[i * N + j] = tmpRes;
+	   output[j * N + i] = 42.3; //tmpRes;
+	   output[i * N + j] = 42.3; //tmpRes;
 	 }
        }
 
