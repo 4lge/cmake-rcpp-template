@@ -36,7 +36,7 @@ ExternalProject_Add(OpenCL_Wrapper
 )
 
 ExternalProject_Add(CLErrorLookup
-    GIT_REPOSITORY https://github.com/otto-link/CLErrorLookup/
+    GIT_REPOSITORY https://github.com/otto-link/CLErrorLookup.git
     GIT_TAG 27adbb9217e2a9e31b08fe32acc21df9d2b53e84
     SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/CLErrorLookup
 
