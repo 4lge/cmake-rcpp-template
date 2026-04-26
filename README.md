@@ -1,3 +1,14 @@
+# This is a fork of
+
+[cmake-rcpp-template](https://github.com/jmaerte/cmake-rcpp-template)
+
+It tries to mix it with [ProjectPhysX/OpenCL-Wrapper](https://github.com/ProjectPhysX/OpenCL-Wrapper).
+
+... work in progress.
+
+Original README:
+
+
 # 📦 Template Project: CMake for Rcpp
 
 A **CRAN-ready R package template** that integrates the simplicity of **CMake** with the power of **Rcpp**, enabling platform-independent linkage to external C/C++ libraries such as **OpenCL**, **OpenGL**, and others.
