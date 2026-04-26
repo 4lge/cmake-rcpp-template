@@ -14,4 +14,3 @@ Imports: Rcpp
 SystemRequirements: OpenCL, CMake
 Encoding: UTF-8
 License: MIT + file LICENSE
-

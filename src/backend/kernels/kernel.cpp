@@ -38,46 +38,27 @@ typedef float16 real16_t;
 
 #endif
 
-      )
-    +R(
-       // distance kernel
-
-       kernel void distance_matrix(global real_t* output, global real_t* input,
-				   const int N, const int DIM) {
-	 size_t i = get_global_id(0);
-	 size_t j = get_global_id(1);
-
-	 if(i < N && j < i){
-	   real_t tmpRes = 0;
-	   for(int k = 0; k < DIM; ++k){
-	     real_t diff = input[i + k*N] - input[j + k*N];
-	     tmpRes += diff * diff;
-	   }
-	   tmpRes = sqrt(tmpRes);
-	   output[j * N + i] = 42.3; //tmpRes;
-	   output[i * N + j] = 42.3; //tmpRes;
-	 }
-       }
-
-       // add kernel
-       kernel void add_kernel(global real_t* A, global real_t* B, global real_t* C) { // equivalent to "for(uint n=0u; n<N; n++) {", but executed in parallel
-	 const uint n = get_global_id(0);
-	 C[n] = A[n]+B[n];
-       }
-
-       // multiply kernel
-       kernel void mul_kernel(global real_t* A, global real_t* B, global real_t* C) { // equivalent to "for(uint n=0u; n<N; n++) {", but executed in parallel
-	 const uint n = get_global_id(0);
-	 C[n] = A[n]*B[n];
-       }
-
        )
     +R(
 
-       // add more utility functions and kernels here
-       //
-       // ...
+       // distance kernel
 
+       kernel void distance_matrix2(global real_t* output, global real_t* input,
+				   private int N, private int DIM) {
+	 size_t i = get_global_id(0);
+	 size_t j = get_global_id(1);
+	 
+	 if(i < N && j < i){
+	   real_t tmpRes = 0;
+	   for(int k = 0; k < DIM; ++k){
+	     real_t diff = input[i + k* N] - input[j + k* N];
+	     tmpRes += diff * diff;
+	   }
+	   tmpRes = sqrt(tmpRes);
+	   output[j * N + i] = tmpRes;
+	   output[i * N + j] = tmpRes;
+	 }	 
+       }
 
+       
        );} // ####################### end of OpenCL C code #####################
-

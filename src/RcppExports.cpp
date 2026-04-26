@@ -10,23 +10,29 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// CLDistanceMatrix
-NumericMatrix CLDistanceMatrix(const NumericMatrix& mat);
-RcppExport SEXP _CMakeRcppTemplate_CLDistanceMatrix(SEXP matSEXP) {
+
+RcppExport SEXP CLDistanceMatrix1(SEXP);
+
+// CLDistanceMatrix2
+NumericMatrix CLDistanceMatrix2(const NumericMatrix& mat);
+RcppExport SEXP _CMakeRcppTemplate_CLDistanceMatrix2(SEXP matSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const NumericMatrix& >::type mat(matSEXP);
-    rcpp_result_gen = Rcpp::wrap(CLDistanceMatrix(mat));
+    rcpp_result_gen = Rcpp::wrap(CLDistanceMatrix2(mat));
     return rcpp_result_gen;
 END_RCPP
 }
 
 RcppExport SEXP InitCL(void);
+RcppExport SEXP SetKernelsPath(SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_CMakeRcppTemplate_CLDistanceMatrix", (DL_FUNC) &_CMakeRcppTemplate_CLDistanceMatrix, 1},
-    {"InitCL", (DL_FUNC) &InitCL, 0},
+    {"_CMakeRcppTemplate_CLDistanceMatrix2", (DL_FUNC) &_CMakeRcppTemplate_CLDistanceMatrix2, 1},
+    {"CLDistanceMatrix1", (DL_FUNC) &CLDistanceMatrix1, 1},
+    {"InitCL",         (DL_FUNC) &InitCL,         0},
+    {"SetKernelsPath", (DL_FUNC) &SetKernelsPath, 1},
     {NULL, NULL, 0}
 };
 
