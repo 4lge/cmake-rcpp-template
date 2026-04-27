@@ -26,8 +26,8 @@ ExternalProject_Add(OpenCL_CLHPP
     INSTALL_COMMAND ""    # Don't install
 )
 ExternalProject_Add(OpenCL_Wrapper
-    GIT_REPOSITORY https://github.com/ProjectPhysX/OpenCL-Wrapper.git
-    GIT_TAG ff34d194c0c82b71b458d77c7c339fa5958af038
+    GIT_REPOSITORY https://github.com/4lge/OpenCL-Wrapper.git
+    GIT_TAG 27c145aacf41bb9884c24c354f7fdac3894c8438
     SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/OpenCL-Wrapper
 
     CONFIGURE_COMMAND ""  # Don't run cmake
@@ -36,7 +36,7 @@ ExternalProject_Add(OpenCL_Wrapper
 )
 
 ExternalProject_Add(CLErrorLookup
-    GIT_REPOSITORY https://github.com/otto-link/CLErrorLookup/
+    GIT_REPOSITORY https://github.com/otto-link/CLErrorLookup.git
     GIT_TAG 27adbb9217e2a9e31b08fe32acc21df9d2b53e84
     SOURCE_DIR ${EXTERNAL_LIB_LOCATION}/CLErrorLookup
 

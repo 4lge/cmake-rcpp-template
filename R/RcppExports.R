@@ -2,6 +2,14 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 CLDistanceMatrix2 <- function(mat) {
-    .Call(`_CMakeRcppTemplate_CLDistanceMatrix2`, mat)
+    .Call(`_CMakeOpenCLRcppTemplate_CLDistanceMatrix2`, mat)
+}
+
+rnormCL <- function(n, mean, sd) {
+    .Call(`_CMakeOpenCLRcppTemplate_rnormCL`, n, mean, sd)
+}
+
+runifCL <- function(n, lower, upper) {
+    .Call(`_CMakeOpenCLRcppTemplate_runifCL`, n, lower, upper)
 }
 

@@ -3,7 +3,6 @@
 
 #include "opencl.hpp" // OpenCL Wrapper stuff
 
-
 #define CL_HPP_ENABLE_EXCEPTIONS
 #define CL_TARGET_OPENCL_VERSION 210
 #define CL_HPP_TARGET_OPENCL_VERSION 210
@@ -33,14 +32,31 @@ namespace backend {
     void activate(int platform_id, int device_id);
     
     Device getActiveDevice();
+
+    void activateDeviceWithMostFlops();
+    
+    void activateDeviceWithMostMemory();
+
+    void activateDeviceWithID(int id);
+
+    void activateDevice(Device_Info dev);
     
     void info();
 
+    string collect_opencl_c_code();
+    
+    bool is_double();
+
+    // attaches the resources path
+    void setKernelsPath(const std::string& str);
+    // retrieves the resources path
+    std::string getKernelsPath() const;
+    
     void initCL();
     
     // Build a program from a kernel file
     cl::Program get_program(const std::string& filepath) const;
-
+    
   private:
     // Initializer runs the typical init code for your external library
     CLpp();
@@ -53,6 +69,7 @@ namespace backend {
     CLpp(const CLpp&) = delete;
     CLpp& operator=(const CLpp&) = delete;
 
+    std::string kernels_path;
 
     // CL constants:
     /*
